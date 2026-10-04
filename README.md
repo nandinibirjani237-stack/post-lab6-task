@@ -5,7 +5,6 @@ int main() {
 int num;
     int total = 50000;
     int count = 0;
-    
     while(1){
         printf("enter a num or press 0 to stop ");
     scanf("%d",&num);
@@ -17,7 +16,6 @@ if(num> total){
          total-=num;
          count ++;
          printf("%d",total);
-
          if (total == 0){
              printf("your balance is now 0");
          }
@@ -181,5 +179,42 @@ printf("total price %d\n ",total);
         printf("finalamount %d",finalamount);}
 
         # task 9
-        
+        #include <stdio.h>
+int main() {
+    int total=0;
+    int bill = 0,surcharge;
+int units[5];
+    for(int i =0;i<5;i++){
+        printf("enter the units");
+        scanf("%d",&units[i]);
+    }
+ for(int i =0;i<5;i++){
+total+=units[i];
+ }
+    int largest=units[0];
+    for(int i =0;i<5;i++){
+if(largest<units[i]){
+    largest=units[i];
+}
+ }
+int smallest=units[0];
+    for(int i =0;i<5;i++){
+if(smallest>units[i]){
+    smallest=units[i];
+}
+         bill=units[i]*10;
+
+         if(units[i] > 500){
+        surcharge=bill*0.05;
+            bill+=surcharge;
+ } }
+    printf("highest unit %d \n",largest);
+    printf("lowest unit %d \n",smallest);
+    printf("total units %d \n",total);
+     printf("total bill %d \n",bill);
+    printf("surcharge applied %d \n", surcharge);
+    
+    return 0;
+}
+
 
